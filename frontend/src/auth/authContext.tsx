@@ -36,7 +36,7 @@ export const AuthProvider: React.FC<Props> = ({ children }) => {
     setIsLoading(false);
   }, []);
 
-  const login = async (newUser: User): Promise<void> => {
+  const login =  (newUser: User): void => {
     setUser(newUser);
     localStorage.setItem(USER_STOREAGE_KEY, JSON.stringify(newUser));
   };

@@ -43,7 +43,7 @@ const Login: React.FC = () => {
   const onSubmit = async (values: FormValues) => {
     try {
       const user = await getUserInfoByUsername(values.username);
-      await login(user);
+      login(user);
       navigate("/");
     } catch (e: any) {
       showError(e?.response.data.error);
